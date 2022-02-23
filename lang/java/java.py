@@ -3,7 +3,9 @@ from talon import Context, Module, actions, settings
 ctx = Context()
 mod = Module()
 ctx.matches = r"""
-tag: user.java
+mode: user.java
+mode: user.auto_lang
+and code.language: java
 """
 ctx.tags = ["user.code_operators", "user.code_generic", "user.code_functions_gui"]
 
@@ -202,7 +204,8 @@ class UserActions:
         actions.insert(" != null")
 
     def code_state_if():
-        actions.insert("if () ")
+        actions.insert("if () {")
+        actions.key("left")
         actions.key("left")
         actions.key("left")
 
@@ -212,7 +215,7 @@ class UserActions:
         actions.key("left")
 
     def code_state_else():
-        actions.insert("else ")
+        actions.insert("else {")
         actions.key("enter")
 
     def code_state_switch():

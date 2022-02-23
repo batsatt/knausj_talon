@@ -175,6 +175,9 @@ class AppActions:
     def tab_previous():
         actions.user.idea("action PreviousTab")
 
+    def tab_previous():
+        actions.user.idea("action PreviousTab")
+
     def tab_close():
         actions.user.idea("action CloseContent")
 
@@ -248,7 +251,7 @@ class EditActions:
 
     def extend_file_end():
         actions.user.idea("action EditorTextEndWithSelection")
-    
+
     def extend_word_left():
         actions.user.idea("action EditorPreviousWordWithSelection")
     def extend_word_right():
