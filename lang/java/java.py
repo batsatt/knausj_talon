@@ -210,7 +210,8 @@ class UserActions:
         actions.key("left")
 
     def code_state_else_if():
-        actions.insert("else if () ")
+        actions.insert("else if () {")
+        actions.key("left")
         actions.key("left")
         actions.key("left")
 
@@ -219,7 +220,8 @@ class UserActions:
         actions.key("enter")
 
     def code_state_switch():
-        actions.insert("switch () ")
+        actions.insert("switch () {")
+        actions.key("left")
         actions.key("left")
         actions.edit.left()
 
@@ -228,12 +230,14 @@ class UserActions:
         actions.edit.up()
 
     def code_state_for():
-        actions.insert("for () ")
+        actions.insert("for () {")
+        actions.key("left")
         actions.key("left")
         actions.key("left")
 
     def code_state_while():
-        actions.insert("while () ")
+        actions.insert("while () {")
+        actions.edit.left()
         actions.edit.left()
         actions.edit.left()
 
